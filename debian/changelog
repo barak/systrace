@@ -1,0 +1,137 @@
+systrace (1:20040126-4) unstable; urgency=low
+
+  * Include italian debconf translation: it.po. (Closes: #249175)
+  * Update template value to "true" instread of "Yes".
+
+ -- Thorsten Sauter <tsauter@debian.org>  Mon, 17 May 2004 00:15:03 +0200
+
+systrace (1:20040126-3) unstable; urgency=low
+
+  * debian/postinst: fix error in maintainer script.
+    the device must be created under /dev (cd to /dev first)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Sat,  3 Apr 2004 01:43:32 +0200
+
+systrace (1:20040126-2) unstable; urgency=low
+
+  * Since makedev supports now the systrace device let's do the
+    makedev package the job (see #171640): debian/postinst
+  * debian/control: depend on the makedev package
+  * do not delete the device during purge. (this was a policy violation)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Sat,  3 Apr 2004 00:25:11 +0200
+
+systrace (1:20040126-1) unstable; urgency=low
+
+  * New upstream version.
+  * Keep version in sync with kernel-patch-systrace version (>= 1.5)
+  * Keep version in sync with xsystrace package (>= 20030623-3)
+  * Adding catalan debconf template: ca.po. (Closes: #236649)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Wed, 31 Mar 2004 16:03:57 +0200
+
+systrace (1:20030623-3) unstable; urgency=low
+
+  * Include work around for linux 2.5.x kernel header files
+    - patching the linux-syscalls.c file. (Closes: #223213)
+  * debian/control: build-depends on linux-kernel-headers v2.5
+  * include japanese translation. (Closes: 224170)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Tue, 16 Dec 2003 17:56:58 +0100
+
+systrace (1:20030623-2) unstable; urgency=low
+
+  * Include dutch debconf translation. (Closes: #206327)
+  * Pump standards version to 3.6.1
+
+ -- Thorsten Sauter <tsauter@debian.org>  Thu,  4 Sep 2003 21:24:45 +0200
+
+systrace (1:20030623-1) unstable; urgency=low
+
+  * New upstream version. (Close: #200521)
+  * debian/control:
+    - update standards version
+    - include new cdbs,libevent-dev,automake1.4 (fore 1.4 here),flex build-dependencies
+  * debian/rules: rewrite using cdbs
+  * put the upstream tarball into the orig tarball
+  * using the cdbs patching system
+
+ -- Thorsten Sauter <tsauter@debian.org>  Sat, 26 Jul 2003 10:27:59 +0200
+
+systrace (1:20030603-1) unstable; urgency=low
+
+  * New upstream version.
+  * debian/control:
+    - change my email address
+    - update standards version
+    - suggest newer xsystrace kernel-patch-systrace versions
+  * update all docus to display new minor device number
+
+ -- Thorsten Sauter <tsauter@debian.org>  Fri, 20 Jun 2003 15:43:50 +0200
+
+systrace (1:20030427-1) unstable; urgency=low
+
+  * New upstream version.
+  * Include french debconf template. (Closes: #193767)
+
+ -- Thorsten Sauter <sar@explorer>  Sun, 18 May 2003 23:16:32 +0200
+
+systrace (1:20030126-1) unstable; urgency=low
+
+  * New upstream version.
+  * Change versioning schema
+  * Insert new pt_BR debconf translation (Closes: #185890)
+    Thanks to Andre Luis Lopes <andrelop@ig.com.br>
+  * debian/control:
+    - update standards version
+    - remove automake dependency
+    - suggest on newer xsystrace and kernel-patch-systrace packages
+  * debian/rules:
+    - remove debhelper compat
+    - honour CFLAGS during build process
+  * debian/compat: define debhelper compat level
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Sat, 22 Mar 2003 21:42:44 +0100
+
+systrace (1.0-5) unstable; urgency=low
+
+  * xsystrace is not longer in default search path, change this.
+  * debian/copyright: change project homepage
+  * debian/control:
+       - suggest line depends on the correct xsystrace version
+       - add po-debconf and new debconf version to build-depends
+  * debian/README.Debian: write a little bit more about permissions
+  * use po-debconf localization
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Wed, 12 Mar 2003 16:41:10 +0100
+
+systrace (1.0-4) unstable; urgency=low
+
+  * Insert example templates for some common programs and daemons.
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Sat, 15 Feb 2003 23:17:36 +0100
+
+systrace (1.0-3) unstable; urgency=low
+
+  * debian/systrace.templates: change spell error (Closes: #173540)
+  * don't override DEB_BUILD_OPTIONS in Makefile.am. (Closes: #173543)
+  * include build depend on automake1.7
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Fri, 20 Dec 2002 21:50:03 +0100
+
+systrace (1.0-2) unstable; urgency=low
+
+  * debian/control: add suggestions:
+       - xsystrace
+       - kernel-patch-systrace (Closes: #172683)
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Thu, 12 Dec 2002 21:02:55 +0100
+
+systrace (1.0-1) unstable; urgency=low
+
+  * First upload to debian directory. Close ITP (Closes: #171273)
+  * debian/rules: install lintian/linda overrides (refer to #171640)
+  * Initial Release.
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Fri, 29 Nov 2002 15:12:38 +0100
+

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+if [ "$1" = "purge" ]; then
+	# remove /etc/systrace directory
+	if [ -d /etc/systrace ]; then
+		echo "Removing /etc/systrace directory"
+		rm -fr /etc/systrace
+		[ $? -ne 0 ] && exit 1
+	fi
+
+	# check if the file already exists
+	[ ! -c /dev/systrace ] && exit 0
+
+	# check if we use devfs
+	grep -q '^devfs' /proc/mounts 2>/dev/null
+	[ $? -eq 0 ] && exit 0
+fi
+
+exit 0
+
+#DEBHELPER#

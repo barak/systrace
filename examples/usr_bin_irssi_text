@@ -1,0 +1,362 @@
+Policy: /usr/bin/irssi-text, Emulation: linux
+	linux-newuname: permit
+	linux-brk: permit
+	linux-fsread: filename eq "/etc/ld.so.preload" then permit
+	linux-fsread: filename eq "/etc/ld.so.cache" then permit
+	linux-fstat64: permit
+	linux-old_mmap: permit
+	linux-close: permit
+	linux-fsread: filename eq "/usr/lib/libperl.so.5.6" then permit
+	linux-read: permit
+	linux-mprotect: permit
+	linux-fsread: filename eq "/lib/libdl.so.2" then permit
+	linux-fsread: filename eq "/lib/libm.so.6" then permit
+	linux-fsread: filename eq "/lib/libcrypt.so.1" then permit
+	linux-fsread: filename eq "/usr/lib/libgmodule-1.2.so.0" then permit
+	linux-fsread: filename eq "/usr/lib/libglib-1.2.so.0" then permit
+	linux-fsread: filename eq "/lib/libncurses.so.5" then permit
+	linux-fsread: filename eq "/lib/libc.so.6" then permit
+	linux-munmap: permit
+	linux-getuid: permit
+	linux-socket: sockdom eq "AF_UNIX" and socktype eq "SOCK_STREAM" then permit
+	linux-connect: sockaddr eq "/var/run/.nscd_socket" then permit
+	linux-fsread: filename eq "/etc/nsswitch.conf" then permit
+	linux-fsread: filename eq "/lib/libnss_compat.so.2" then permit
+	linux-fsread: filename eq "/lib/libnsl.so.1" then permit
+	linux-fsread: filename eq "/etc/passwd" then permit
+	linux-fcntl64: permit
+	linux-llseek: permit
+	linux-fsread: filename eq "/usr/local/bin/irssi" then permit
+	linux-fsread: filename eq "/usr/bin/irssi" then permit
+	linux-fsread: filename eq "/home/user/.irssi" then permit
+	linux-fswrite: filename eq "/home/user/.irssi/default.theme" then permit
+	linux-rt_sigaction: permit
+	linux-gettimeofday: permit
+	linux-fsread: filename eq "/home/user/.irssi/config" then permit
+	linux-time: permit
+	linux-getrlimit: permit
+	linux-setrlimit: permit
+	linux-fsread: filename eq "/home/user/.irssi/default.theme" then permit
+	linux-fsread: filename eq "/home/user/.irssi/litE.theme" then permit
+	linux-fsread: filename eq "/etc/popt" then permit
+	linux-geteuid: permit
+	linux-fsread: filename eq "/home/user/.popt" then permit
+	linux-fsread: filename eq "/home/user/.terminfo/s/screen" then permit
+	linux-fsread: filename eq "/etc/terminfo/s/screen" then permit
+	linux-ioctl: permit
+	linux-write: permit
+	linux-getgid: permit
+	linux-getegid: permit
+	linux-rt_sigprocmask: permit
+	linux-fsread: filename eq "/usr/local/lib/site_perl/5.6.1/i386-linux" then permit
+	linux-fsread: filename eq "/usr/local/lib/site_perl/5.6.1" then permit
+	linux-fsread: filename eq "/usr/local/lib/site_perl/i386-linux" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.0" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.0" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.005" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.005" then permit
+	linux-fsread: filename eq "/dev/null" then permit
+	linux-getpid: permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Irssi/Irc.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Irssi/Irc.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Irssi/Irc.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Symbol.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Symbol.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Symbol.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Symbol.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Symbol.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Symbol.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl5/Symbol.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl5/Symbol.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Symbol.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Symbol.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/Symbol.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/Symbol.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Exporter.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Exporter.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Exporter.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Exporter.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Exporter.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Exporter.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl5/Exporter.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl5/Exporter.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Exporter.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Exporter.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/Exporter.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/Exporter.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Exporter/Heavy.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Exporter/Heavy.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Exporter/Heavy.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Exporter/Heavy.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Exporter/Heavy.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Exporter/Heavy.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl5/Exporter/Heavy.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl5/Exporter/Heavy.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Exporter/Heavy.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Exporter/Heavy.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/Exporter/Heavy.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/Exporter/Heavy.pm" then permit
+	linux-fsread: filename eq "/etc/localtime" then permit
+	linux-fsread: filename eq "/home/user/.irssi/startup" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/autorun" then permit
+	linux-getdents64: permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/autorun/serverstatus.pl" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/lib.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/lib.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/lib.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/lib.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/lib.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/lib.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl5/lib.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl5/lib.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/lib.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/lib.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/lib.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/lib.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Config.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Config.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Config.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Config.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Config.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Config.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl5/Config.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl5/Config.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Config.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Config.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/5.005" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/5.6.0" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/i386-linux/auto" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/5.6.1" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/5.6.1/i386-linux" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/5.005" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/5.6.0" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/i386-linux/auto" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/5.6.1" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/5.6.1/i386-linux" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/5.005" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/5.6.0" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/i386-linux/auto" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/5.6.1" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/5.6.1/i386-linux" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/Irssi.pmc" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/Irssi.pm" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/Irssi.pmc" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/Irssi.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Irssi.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Irssi.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Irssi.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Irssi.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Irssi.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Irssi.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Irssi.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Irssi.pm" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/strict.pmc" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/strict.pm" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/strict.pmc" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/strict.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/strict.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/strict.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/strict.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/strict.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/strict.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/strict.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/strict.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/strict.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl5/strict.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl5/strict.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/strict.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/strict.pm" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/vars.pmc" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/vars.pm" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/vars.pmc" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/vars.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/vars.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/vars.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/vars.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/vars.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/vars.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/vars.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/vars.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/vars.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl5/vars.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl5/vars.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/vars.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/vars.pm" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/warnings/register.pmc" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/warnings/register.pm" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/warnings/register.pmc" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/warnings/register.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/warnings/register.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/warnings/register.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/warnings/register.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/warnings/register.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/warnings/register.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/warnings/register.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/warnings/register.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/warnings/register.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl5/warnings/register.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl5/warnings/register.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/warnings/register.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/warnings/register.pm" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/warnings.pmc" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/warnings.pm" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/warnings.pmc" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/warnings.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/warnings.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/warnings.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/warnings.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/warnings.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/warnings.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/warnings.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/warnings.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/warnings.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl5/warnings.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl5/warnings.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/warnings.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/warnings.pm" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/Carp.pmc" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/Carp.pm" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/Carp.pmc" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/Carp.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Carp.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Carp.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Carp.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Carp.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Carp.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Carp.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Carp.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Carp.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl5/Carp.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl5/Carp.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/Carp.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/Carp.pm" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/DynaLoader.pmc" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/DynaLoader.pm" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/DynaLoader.pmc" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/DynaLoader.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/DynaLoader.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/DynaLoader.pm" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/AutoLoader.pmc" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/AutoLoader.pm" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/AutoLoader.pmc" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/AutoLoader.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/AutoLoader.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/AutoLoader.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/AutoLoader.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/AutoLoader.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/AutoLoader.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/AutoLoader.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/AutoLoader.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/AutoLoader.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl5/AutoLoader.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl5/AutoLoader.pm" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/AutoLoader.pmc" then permit
+	linux-fsread: filename eq "/usr/share/perl/5.6.1/AutoLoader.pm" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/Errno.pmc" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/Errno.pm" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/Errno.pmc" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/Errno.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Errno.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Errno.pm" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/auto/Irssi" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/auto/Irssi" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/auto/Irssi" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/auto/Irssi" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/auto/Irssi" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/auto/Irssi" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/auto/Irssi/Irssi.so" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/auto/Irssi/Irssi.bs" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/Irssi/UI.pmc" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/Irssi/UI.pm" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/Irssi/UI.pmc" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/Irssi/UI.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Irssi/UI.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Irssi/UI.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Irssi/UI.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Irssi/UI.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Irssi/UI.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Irssi/UI.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Irssi/UI.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Irssi/UI.pm" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/auto/Irssi/UI" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/auto/Irssi/UI" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/auto/Irssi/UI" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/auto/Irssi/UI" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/auto/Irssi/UI" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/auto/Irssi/UI" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/auto/Irssi/UI/UI.so" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/auto/Irssi/UI/UI.bs" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/Irssi/Irc.pmc" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/Irssi/Irc.pm" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/Irssi/Irc.pmc" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/Irssi/Irc.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Irssi/Irc.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Irssi/Irc.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Irssi/Irc.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Irssi/Irc.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Irssi/Irc.pmc" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/auto/Irssi/Irc" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/auto/Irssi/Irc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/auto/Irssi/Irc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/auto/Irssi/Irc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/auto/Irssi/Irc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/auto/Irssi/Irc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/auto/Irssi/Irc/Irc.so" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/auto/Irssi/Irc/Irc.bs" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/autorun/autorealname.pl" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/autorun/usercount.pl" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/Irssi/TextUI.pmc" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/Irssi/TextUI.pm" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/Irssi/TextUI.pmc" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/Irssi/TextUI.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Irssi/TextUI.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/Irssi/TextUI.pm" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Irssi/TextUI.pmc" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/Irssi/TextUI.pm" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Irssi/TextUI.pmc" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/Irssi/TextUI.pm" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Irssi/TextUI.pmc" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/Irssi/TextUI.pm" then permit
+	linux-fsread: filename eq "/home/user/.irssi/scripts/auto/Irssi/TextUI" then permit
+	linux-fsread: filename eq "/usr/share/irssi/scripts/auto/Irssi/TextUI" then permit
+	linux-fsread: filename eq "/usr/lib/perl/5.6.1/auto/Irssi/TextUI" then permit
+	linux-fsread: filename eq "/usr/local/lib/perl/5.6.1/auto/Irssi/TextUI" then permit
+	linux-fsread: filename eq "/usr/local/share/perl/5.6.1/auto/Irssi/TextUI" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/auto/Irssi/TextUI" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/auto/Irssi/TextUI/TextUI.so" then permit
+	linux-fsread: filename eq "/usr/lib/perl5/auto/Irssi/TextUI/TextUI.bs" then permit
+	linux-pipe: permit
+	linux-poll: permit
+	linux-fork: permit
+	linux-fsread: filename eq "/etc/resolv.conf" then permit
+	linux-fsread: filename eq "/lib/libnss_files.so.2" then permit
+	linux-fsread: filename eq "/etc/host.conf" then permit
+	linux-fsread: filename eq "/etc/hosts" then permit
+	linux-fsread: filename eq "/lib/libnss_dns.so.2" then permit
+	linux-fsread: filename eq "/lib/libresolv.so.2" then permit
+	linux-socket: sockdom eq "AF_INET" and socktype eq "SOCK_DGRAM" then permit
+	linux-connect: sockaddr eq "inet-*:53" then permit
+	linux-send: true then permit
+	linux-recvfrom: true then permit
+	linux-ni_syscallexit: permit
+	linux-socket: sockdom eq "AF_INET" and socktype eq "SOCK_STREAM" then permit
+	linux-setsockopt: true then permit
+	linux-connect: sockaddr eq "inet-[192.168.1.2]:6667" then permit
+	linux-getsockopt: true then permit
+	linux-wait4: permit
+	linux-connect: sockaddr match "inet-*:*" then permit
+	linux-fsread: filename eq "/home/user/*" then permit
+	linux-fswrite: filename eq "/home/user/*" then permit
+	linux-umask: permit
+	linux-link: filename eq "/home/user/*" and filename[1] eq "/home/sar/*" then permit
+	linux-fsread: filename eq "/home/user" then permit
+	linux-lseek: permit
+	linux-getsockname: true then permit
+	linux-bind: sockaddr eq "inet-[192.168.1.1]:0" then permit
+	linux-listen: true then permit
+	linux-accept: true then permit
+	linux-select: permit
+

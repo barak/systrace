@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+. /usr/share/debconf/confmodule
+
+# ask if we should create /dev/systrace
+db_input medium systrace/createdev || true
+db_go
+
+exit 0
+

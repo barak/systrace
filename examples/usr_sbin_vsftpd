@@ -1,0 +1,82 @@
+Policy: /usr/sbin/vsftpd, Emulation: linux
+	linux-newuname: permit
+	linux-brk: permit
+	linux-fsread: filename eq "/etc/ld.so.preload" then permit
+	linux-fsread: filename eq "/etc/ld.so.cache" then permit
+	linux-fstat64: permit
+	linux-old_mmap: permit
+	linux-close: permit
+	linux-fsread: filename eq "/lib/libpam.so.0" then permit
+	linux-read: permit
+	linux-mprotect: permit
+	linux-fsread: filename eq "/lib/libcrypt.so.1" then permit
+	linux-fsread: filename eq "/lib/libdl.so.2" then permit
+	linux-fsread: filename eq "/lib/libnsl.so.1" then permit
+	linux-fsread: filename eq "/lib/libutil.so.1" then permit
+	linux-fsread: filename eq "/lib/libcap.so.1" then permit
+	linux-fsread: filename eq "/lib/libc.so.6" then permit
+	linux-munmap: permit
+	linux-fsread: filename eq "/etc/vsftpd.conf" then permit
+	linux-getuid: permit
+	linux-getpeername: true then permit
+	linux-getsockname: true then permit
+	linux-socket: sockdom eq "AF_UNIX" and socktype eq "SOCK_STREAM" then permit
+	linux-connect: sockaddr eq "/var/run/.nscd_socket" then permit
+	linux-fsread: filename eq "/etc/nsswitch.conf" then permit
+	linux-fsread: filename eq "/lib/libnss_compat.so.2" then permit
+	linux-fsread: filename eq "/etc/passwd" then permit
+	linux-fcntl64: permit
+	linux-llseek: permit
+	linux-setsid: permit
+	linux-getpid: permit
+	linux-getpgrp: permit
+	linux-umask: permit
+	linux-fsread: filename eq "/etc/localtime" then permit
+	linux-rt_sigaction: permit
+	linux-fswrite: filename eq "/var/log/vsftpd.log" then permit
+	linux-setsockopt: true then permit
+	linux-socketpair: true then permit
+	linux-fork: permit
+	linux-fsread: filename eq "/var/run/vsftpd" then permit
+	linux-setgroups: permit
+	linux-chdir: filename eq "/var/run/vsftpd" then permit
+	linux-chroot: filename eq "/var/run/vsftpd" then permit
+	linux-setgid: gid eq "65534" then permit
+	linux-setuid: uid eq "65534" and uname eq "nobody" then permit
+	linux-alarm: permit
+	linux-write: permit
+	linux-recv: true then permit
+	linux-gettimeofday: permit
+	linux-wait4: permit
+	linux-ni_syscallexit: permit
+	linux-fsread: filename eq "/etc/group" then permit
+	linux-chdir: filename eq "/home/ftp" then permit
+	linux-chroot: filename eq "/home/ftp" then permit
+	linux-capget: permit
+	linux-prctl: permit
+	linux-setgid: gid eq "102" then permit
+	linux-setuid: uid eq "102" and uname eq "ftp" then permit
+	linux-fsread: filename eq "/" then permit
+	linux-getcwd: permit
+	linux-capset: permit
+	linux-fsread: filename eq "/.message" then permit
+	linux-fsread: filename eq "/dev/null" then permit
+	linux-socket: sockdom eq "AF_INET" and socktype eq "SOCK_STREAM" then permit
+	linux-bind: sockaddr match "inet-*:20" then permit
+	linux-sendmsg: true then permit
+	linux-recvmsg: true then permit
+	linux-connect: sockaddr eq "*" then permit
+	linux-select: permit
+	linux-getsockopt: true then permit
+	linux-getdents64: permit
+	linux-bind: sockaddr match "inet-[192.168.1.1]:*" then permit
+	linux-connect: sockaddr match "inet-*:*" then permit
+	linux-fsread: filename match "/*" then permit
+	linux-chdir: filename match "/*" then permit
+	linux-llseek: filename match "/*" then permit
+	linux-lseek: permit
+	linux-sendfile: permit
+	linux-bind: sockaddr match "inet-*:*" then permit
+	linux-listen: true then permit
+	linux-accept: true then permit
+

@@ -1,0 +1,21 @@
+Source: systrace
+Section: admin
+Priority: optional
+Maintainer: Thorsten Sauter <tsauter@debian.org>
+Build-Depends: cdbs, debhelper (>= 4.1.16), automake1.4, flex, libevent-dev, linux-kernel-headers (>= 2.5.999-test7-bk-10)
+Standards-Version: 3.6.1
+
+Package: systrace
+Architecture: i386
+Depends: ${shlibs:Depends}, debconf
+Suggests: makedev (>= 2.3.1-66), xsystrace (>= 1:20030623-3), kernel-patch-systrace (>= 1.5-1)
+Description: Enforce system call policies for applications
+ Systrace enforces system call policies for applications by
+ constraining the application's access to the system. The
+ policy is generated interactively. Operations not covered
+ by the policy raise an alarm and allow an user to refine the
+ currently configured policy.
+ .
+ This requires a special kernel patch, provided by kernels compiled
+ with the kernel-patch-systrace patch.
+

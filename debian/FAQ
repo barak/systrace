@@ -1,0 +1,64 @@
+This is the systrace FAQ
+
+Copyright (C) 2002 Thorsten Sauter <tsauter@gmx.net>
+This document contains a set of frequently-asked questions concerning
+systrace. This FAQ was written for the GNU/Debian project, and is
+published under the terms of the GNU Free Documentation License.
+
+------------
+
+Contents:
+
+1)  How can I detect if the kernel support systrace
+2)  I have no /dev/systrace device
+3)  Only root can use systrace. What's wrong?
+4)  After rebooting the devfsd reset the permissions
+
+------------
+
+1)  How can I detect if the kernel support systrace
+
+While booting the systrace support write a message to dmesg
+
+$ grep ^systrace /var/log/dmesg
+systrace: systrace initialized
+
+
+2)  I have no /dev/systrace device
+
+You can create the device with the following command. Note: if you're
+using devfs then it should be created automaticly
+
+# mknod -m600 /dev/systrace c 10 226
+
+For proper permissions see next section.
+
+
+3)  Only root can use systrace. What's wrong?
+
+The systrace command needs read and write access to the systrace
+device (/dev/systrace or /dev/misc/systrace).
+
+You should create a special systrace group, add the users to this group
+and change the permissions of the device for this group.
+
+# addgroup --system systrace
+# adduser test systrace
+# chown root.systrace /dev/systrace
+# chmod 0660 /dev/systrace
+
+If you are using devfs please see next question.
+
+
+4)  After rebooting the devfsd reset the permissions
+
+The devfs daemon doesn't know anything about the permissions, so it will
+set the default after rebooting/initializing.
+
+You can insert the following line to your /etc/devfsd/devfsd.conf
+
+$ grep systrace /etc/devfs/devfsd.conf 
+REGISTER        ^misc/systrace$         PERMISSIONS     root.systrace   0660
+
+------------
+

@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: systrace 1:20040126 (templates)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-17 00:31+0200\n"
+"PO-Revision-Date: 2004-05-13 14:37+0200\n"
+"Last-Translator: Luca Monducci <luca.mo@tiscali.it>\n"
+"Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../systrace.templates:4
+msgid "Should I create the systrace device?"
+msgstr "Creare il device systrace?"
+
+#. Type: boolean
+#. Description
+#: ../systrace.templates:4
+msgid ""
+"Systrace needs a special device in order to work properly. Should I create "
+"this file (/dev/systrace) for you?"
+msgstr ""
+"Per funzionare correttamente Systrace richiede un device speciale, creare "
+"adesso questo file (/dev/systrace)?"

@@ -1,0 +1,102 @@
+Policy: /usr/sbin/named, Emulation: linux
+	linux-newuname: permit
+	linux-brk: permit
+	linux-fsread: filename eq "/etc/ld.so.preload" then permit
+	linux-fsread: filename eq "/etc/ld.so.cache" then permit
+	linux-fstat64: permit
+	linux-old_mmap: permit
+	linux-close: permit
+	linux-fsread: filename eq "/usr/lib/liblwres.so.1" then permit
+	linux-read: permit
+	linux-mprotect: permit
+	linux-fsread: filename eq "/usr/lib/libdns.so.5" then permit
+	linux-fsread: filename eq "/usr/lib/libcrypto.so.0.9.6" then permit
+	linux-fsread: filename eq "/usr/lib/libisccfg.so.0" then permit
+	linux-fsread: filename eq "/usr/lib/libisccc.so.0" then permit
+	linux-fsread: filename eq "/usr/lib/libisc.so.4" then permit
+	linux-fsread: filename eq "/lib/libnsl.so.1" then permit
+	linux-fsread: filename eq "/lib/libpthread.so.0" then permit
+	linux-fsread: filename eq "/lib/libc.so.6" then permit
+	linux-fsread: filename eq "/lib/libdl.so.2" then permit
+	linux-munmap: permit
+	linux-getrlimit: permit
+	linux-setrlimit: permit
+	linux-getpid: permit
+	linux-rt_sigaction: permit
+	linux-rt_sigprocmask: permit
+	linux-sysctl: permit
+	linux-socket: sockdom eq "AF_UNIX" and socktype eq "SOCK_DGRAM" then permit
+	linux-fcntl64: permit
+	linux-connect: sockaddr eq "/dev/log" then permit
+	linux-getuid: permit
+	linux-capset: permit
+	linux-fsread: filename eq "/usr/share/locale/C/libdns.cat" then permit
+	linux-fsread: filename eq "/usr/share/locale/C/LC_MESSAGES/libdns.cat" then permit
+	linux-fsread: filename eq "/usr/share/locale/C/libisc.cat" then permit
+	linux-fsread: filename eq "/usr/share/locale/C/LC_MESSAGES/libisc.cat" then permit
+	linux-fsread: filename eq "/usr/share/locale/C/libdst.cat" then permit
+	linux-fsread: filename eq "/usr/share/locale/C/LC_MESSAGES/libdst.cat" then permit
+	linux-fsread: filename eq "/usr/share/locale/C/libisccc.cat" then permit
+	linux-fsread: filename eq "/usr/share/locale/C/LC_MESSAGES/libisccc.cat" then permit
+	linux-prctl: permit
+	linux-fork: permit
+	linux-ni_syscallexit: permit
+	linux-setsid: permit
+	linux-fswrite: filename eq "/dev/null" then permit
+	linux-dup2: permit
+	linux-time: permit
+	linux-fsread: filename eq "/etc/localtime" then permit
+	linux-send: true then permit
+	linux-fsread: filename eq "/etc/mtab" then permit
+	linux-fsread: filename eq "/proc/cpuinfo" then permit
+	linux-pipe: permit
+	linux-clone: permit
+	linux-write: permit
+	linux-rt_sigsuspend: permit
+	linux-poll: permit
+	linux-getppid: permit
+	linux-sched_setscheduler: permit
+	linux-kill: pidname eq "/usr/sbin/named" and signame eq "<unknown>: 32" then permit
+	linux-sigreturn: permit
+	linux-gettimeofday: permit
+	linux-select: permit
+	linux-fsread: filename eq "/etc/bind/named.conf" then permit
+	linux-chdir: filename eq "/var/cache/bind" then permit
+	linux-socket: sockdom eq "AF_INET" and socktype eq "SOCK_STREAM" then permit
+	linux-socket: sockdom eq "AF_INET6" and socktype eq "SOCK_STREAM" then permit
+	linux-getsockname: true then permit
+	linux-socket: sockdom eq "AF_INET" and socktype eq "SOCK_DGRAM" then permit
+	linux-ioctl: permit
+	linux-setsockopt: true then permit
+	linux-bind: sockaddr eq "inet-[127.0.0.1]:53" then permit
+	linux-listen: true then permit
+	linux-bind: sockaddr eq "inet-[192.168.1.1]:53" then permit
+	linux-fsread: filename eq "/etc/bind/db.root" then permit
+	linux-bind: sockaddr eq "inet-[0.0.0.0]:0" then permit
+	linux-socket: sockdom eq "AF_INET6" and socktype eq "SOCK_DGRAM" then permit
+	linux-bind: sockaddr eq "inet-[::3000:0:0:0]:0" then permit
+	linux-fsread: filename eq "/etc/bind/rndc.key" then permit
+	linux-bind: sockaddr eq "inet-[127.0.0.1]:953" then permit
+	linux-bind: sockaddr eq "inet-[::3935:3300:0:0]:953" then permit
+	linux-fsread: filename eq "/dev/random" then permit
+	linux-fsread: filename eq "/var/run/named.pid" then permit
+	linux-fswrite: filename eq "/var/run/named.pid" then permit
+	linux-llseek: permit
+	linux-fsread: filename eq "/etc/bind/db.0" then permit
+	linux-fsread: filename eq "/etc/bind/db.0.jnl" then permit
+	linux-fsread: filename eq "/etc/bind/db.127" then permit
+	linux-fsread: filename eq "/etc/bind/db.127.jnl" then permit
+	linux-fsread: filename eq "/etc/bind/db.255" then permit
+	linux-fsread: filename eq "/etc/bind/db.255.jnl" then permit
+	linux-fsread: filename eq "/etc/bind/db.test" then permit
+	linux-fsread: filename eq "/etc/bind/db.test.jnl" then permit
+	linux-fsread: filename eq "/etc/bind/db.local" then permit
+	linux-fsread: filename eq "/etc/bind/db.local.jnl" then permit
+	linux-recvmsg: true then permit
+	linux-sendmsg: true then permit
+	linux-nanosleep: permit
+	linux-accept: true then permit
+	linux-kill: pidname eq "/usr/sbin/named" and signame eq "SIGTERM" then permit
+	linux-wait4: permit
+	linux-kill: pidname eq "/usr/sbin/named" and signame eq "<unknown>: 33" then permit
+

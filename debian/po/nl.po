@@ -1,0 +1,40 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: systrace\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-17 00:31+0200\n"
+"PO-Revision-Date: 2003-08-19 16:12+0100\n"
+"Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
+"Language-Team: dutch <debian-l10n-dutch@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../systrace.templates:4
+msgid "Should I create the systrace device?"
+msgstr "Zal ik het systrace apparaatbestand aanmaken?"
+
+#. Type: boolean
+#. Description
+#: ../systrace.templates:4
+msgid ""
+"Systrace needs a special device in order to work properly. Should I create "
+"this file (/dev/systrace) for you?"
+msgstr ""
+"Systrace vereist een speciaal apparaatbestand om goed te werken. Zal ik dit "
+"apparaatbestand (/dev/systrace) aanmaken?"

@@ -1,0 +1,6 @@
+Template: systrace/createdev
+Type: boolean
+Default: true
+_Description: Should I create the systrace device?
+ Systrace needs a special device in order to work properly. Should I create
+ this file (/dev/systrace) for you?

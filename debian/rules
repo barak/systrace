@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+DEB_TAR_SRCDIR := systrace-1.5
+DEB_BUILDDIR = $(DEB_SRCDIR)
+
+DEB_INSTALL_DOCS_systrace := debian/FAQ
+DEB_INSTALL_EXAMPLES_systrace := examples/*
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/autotools.mk
+include /usr/share/cdbs/1/rules/tarball.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
+
+binary-post-install/systrace::
+	# remove unused/unwished stat binary
+	rm -f debian/systrace/usr/bin/stat
+	# cleanup unused directories
+	rm -fr debian/systrace/usr/include
+
