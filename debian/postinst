@@ -1,21 +1,30 @@
 #!/bin/sh
 
+set -e
+
 . /usr/share/debconf/confmodule
 
 db_get systrace/createdev
 if [ "$RET" = "true" ]; then
-	# check if the file already exists
-	[ -c /dev/systrace ] && exit 0
+    # check if the file already exists
+    if [ -c /dev/systrace ]; then
+	exit 0
+    fi
 
-	# check if we use devfs
-	grep -q '^devfs' /proc/mounts 2>/dev/null
-	[ $? -eq 0 ] && exit 0
+    # check if we use devfs
+    if grep -q '^devfs' /proc/mounts 2>/dev/null; then
+	: using devfs so continue
+    else
+	exit 0
+    fi
 
+    if which MAKEDEV > /dev/null; then
 	echo "Creating character device: /dev/systrace"
-	[ -f /dev/systrace ] && rm -f /dev/systrace
-	cd /dev/ && /sbin/MAKEDEV systrace
+	if [ -f /dev/systrace ] ; then
+	    rm -f /dev/systrace
+	fi
+	cd /dev/ && MAKEDEV systrace
+    fi
 fi
-
-exit 0
 
 #DEBHELPER#

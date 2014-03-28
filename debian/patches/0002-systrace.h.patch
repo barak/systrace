@@ -1,6 +1,15 @@
-diff -Naur systrace-1.0/systrace.h systrace-1.0.new/systrace.h
---- systrace-1.5/systrace.h	2003-07-26 10:39:20.000000000 +0200
-+++ systrace-1.5.new/systrace.h	2003-07-26 10:39:58.000000000 +0200
+From: "Barak A. Pearlmutter" <barak+git@cs.nuim.ie>
+Date: Sat, 29 Mar 2014 10:47:22 +0000
+Subject: systrace.h
+
+---
+ systrace.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/systrace.h b/systrace.h
+index f57cdb2..7434a3d 100644
+--- a/systrace.h
++++ b/systrace.h
 @@ -34,7 +34,7 @@
  #include <sys/queue.h>
  

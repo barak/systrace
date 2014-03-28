@@ -1,13 +1,20 @@
 Source: systrace
 Section: admin
 Priority: optional
-Maintainer: Thorsten Sauter <tsauter@debian.org>
-Build-Depends: cdbs, debhelper (>= 4.1.16), automake1.4, flex, libevent-dev, linux-kernel-headers (>= 2.5.999-test7-bk-10)
-Standards-Version: 3.6.1
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Build-Depends: debhelper (>= 9), dh-autoreconf,
+	       flex, bison,
+	       libevent-dev,
+	       linux-kernel-headers (>= 2.5.999-test7-bk-10),
+	       libbsd-dev
+Standards-Version: 3.9.5
+Homepage: http://www.systrace.org/
+Vcs-Git: git://anonscm.debian.org/collab-maint/systrace.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/systrace.git
 
 Package: systrace
-Architecture: i386
-Depends: ${shlibs:Depends}, debconf
+Architecture: i386 amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, debconf
 Suggests: makedev (>= 2.3.1-66), xsystrace (>= 1:20030623-3), kernel-patch-systrace (>= 1.5-1)
 Description: Enforce system call policies for applications
  Systrace enforces system call policies for applications by
@@ -16,6 +23,7 @@ Description: Enforce system call policies for applications
  by the policy raise an alarm and allow an user to refine the
  currently configured policy.
  .
- This requires a special kernel patch, provided by kernels compiled
- with the kernel-patch-systrace patch.
-
+ This can make use of a special kernel patch, provided by kernels
+ compiled with the kernel-patch-systrace patch.  If that is not
+ present, the ptrace facility will be used instead, with a loss in
+ security due to ptrace race conditions.

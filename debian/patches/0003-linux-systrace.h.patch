@@ -1,5 +1,17 @@
---- linux/systrace.h	2004-03-31 11:42:04.000000000 +0200
-+++ linux.new/systrace.h	2004-03-31 17:18:19.000000000 +0200
+From: "Barak A. Pearlmutter" <barak+git@cs.nuim.ie>
+Date: Sat, 29 Mar 2014 10:48:05 +0000
+Subject: linux/systrace.h
+
+---
+ linux/systrace.h | 216 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 216 insertions(+)
+ create mode 100644 linux/systrace.h
+
+diff --git a/linux/systrace.h b/linux/systrace.h
+new file mode 100644
+index 0000000..d247606
+--- /dev/null
++++ b/linux/systrace.h
 @@ -0,0 +1,216 @@
 +/*
 + * systrace.h
