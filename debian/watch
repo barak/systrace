@@ -1,2 +1,11 @@
 version=3
+
+# Old, versions 1.6 to 1.6f
+
 http://www.citi.umich.edu/u/provos/systrace/ systrace-([0-9].*)\.tar\.gz
+
+# Version 1.6g, and following I presume
+
+opts="pgpsigurlmangle=s/$/.sig/" \
+http://www.provos.org/index.php?/categories/2-Systrace \
+ /uploads/systrace-([0-9].*)\.tar\.gz
