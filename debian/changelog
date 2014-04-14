@@ -1,10 +1,10 @@
-systrace (2:1.6f-1) unstable; urgency=medium
+systrace (2:1.6g-1) unstable; urgency=medium
 
   * New upstream version.
   * Patch upstream to allow compilation in modern environment.
   * Update packaging, use dh9 instead of cdbs
 
- -- Barak A. Pearlmutter <bap@debian.org>  Sat, 29 Mar 2014 10:18:42 +0000
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 14 Apr 2014 18:09:04 +0100
 
 systrace (1:20040126-4) unstable; urgency=low
 
