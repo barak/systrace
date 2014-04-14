@@ -33,10 +33,12 @@
 #define _SYSTRACE_H_
 #include <sys/queue.h>
 
+#ifndef _PATH_XSYSTRACE
 #ifndef __APPLE__
 #define _PATH_XSYSTRACE	"/usr/X11R6/bin/xsystrace"
 #else
 #define	_PATH_XSYSTRACE	"/Applications/Utilities/Cocoa-Systrace.app/Contents/MacOS/Cocoa-Systrace"
+#endif
 #endif
 
 enum logicop { LOGIC_AND, LOGIC_OR, LOGIC_NOT, LOGIC_SINGLE };
