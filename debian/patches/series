@@ -1,3 +1,2 @@
 0001-regress-regress.sh.patch
-0002-systrace.h.patch
-0003-linux-systrace.h.patch
+0002-linux-systrace.h.patch

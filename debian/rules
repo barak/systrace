@@ -2,3 +2,7 @@
 
 %:
 	dh $@ --with autoreconf --parallel
+
+export CPPFLAGS =						\
+	-D_PATH_XSYSTRACE='"/usr/lib/xsystrace/xsystrace"'	\
+	$(shell dpkg-buildflags --get CPPFLAGS)
